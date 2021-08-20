@@ -14,7 +14,7 @@ const userSchema = new Schema({
     email: { type: String, required: [true, "Email Obligatorio"], unique: true },
     password: { type: String, required: [true, "Password Obligatorio"] },
     date: { type: Date, default: Date.now },
-    role: { type: String, default: "ADMIN", enum: roles },
+    role: { type: String, default: "USER", enum: roles },
     activo: { type: Boolean, default: true }
 });
 

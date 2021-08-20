@@ -42,7 +42,7 @@ const PORT = 3000;
     res.send('Hello World!');
 });*/
 
-app.use("/api", require("./routes/nota"));
+app.use("/api", require("./routes/empleado"));
 app.use("/api", require("./routes/user"));
 app.use("/api/login", require("./routes/login"));
 

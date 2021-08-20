@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+const uniqueValidator = require('mongoose-unique-validator');
+
 const Schema = mongoose.Schema;
 
 const reputacion = {
@@ -12,6 +14,7 @@ const empleadoSchema = new Schema({
     salario: Number,
     date: { type: Date, default: Date.now },
     activo: { type: Boolean, default: true },
+    usuarioId: String,
     estrellas: {type: Number, enum: reputacion}
 });
 
@@ -20,4 +23,4 @@ empleadoSchema.plugin(uniqueValidator, { message: 'Error, expected {PATH} to be 
 // Convertir a modelo
 const empleado = mongoose.model('empleado', empleadoSchema);
 
-export default Nota
+export default empleado
